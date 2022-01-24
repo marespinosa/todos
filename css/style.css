@@ -1,0 +1,214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.menunav{
+  float:none;
+  width:100%;
+  overflow: hidden;
+}
+
+.menunav ul{
+  float:right;
+}
+
+.menunav ul li{
+  list-style:none;
+  float:left;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right:1px solid #000;
+}
+
+.menunav ul li:last-child{
+  border:0 none;
+}
+
+a{
+  text-decoration: none;
+  color:#202020;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: rgba(34, 161, 247, 0.884);
+}
+
+.container{
+  width: 50%;
+  margin: 0 auto;
+}
+
+#modal_opener {
+  padding: 4px 0;
+  transform: translateX(-50%) translateY(-50%);
+  transition: background 0.2s ease;
+}
+
+#modal_opener:hover {
+  cursor: pointer;
+}
+  
+#modal_opener::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.4);
+  opacity: 0.4;
+  transform: translateX(-50%) translateY(-50%);
+  bottom: -30px;
+}
+
+/* Modal */
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 990;
+}
+
+.modal .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 995;
+  background: rgba(0,0,0,0.85);
+}
+
+.modal .modal_content {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  overflow: auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.7);
+  border-radius: 4px;
+  width: 520px; /* This just a default width */
+  text-align: center;
+}
+
+.modal .modal_content > h2 {
+  font-size: 28px;
+  font-weight: 200;
+  margin: 20px 0 40px;
+  text-align: center;
+}
+
+.modal .close_modal {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.5;
+  background: none;
+  border: none;
+  transition: opacity 0.2s ease;
+}
+
+.modal .close_modal:hover {
+  opacity: 0.9;
+}
+
+
+.table{
+  background-color: #ddd;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.table th{
+  padding: 10px;
+}
+
+.table td{
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+
+.form{
+  padding: 10px;
+}
+
+.form input, .form .form-select{
+  width:90%;
+  float: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  border:1px solid #ddd;
+  font-size: 16px;
+}
+
+.form .form-select{
+  margin: 0 0 20px 0;
+  width: 95%;
+}
+
+.form .add-button{
+  width: 20%;
+  margin: 0 auto;
+  cursor: pointer;
+  border:0 none;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.form .add-button:hover{
+  background: rgba(34, 161, 247, 0.884);
+  color:#fff;
+}
+
+.tbody{
+  background: #fff;
+}
+.pull-right{
+  float: right;
+  border:0 none;
+  background: rgba(34, 161, 247, 0.884);
+  color:#fff;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.tbody tr:first-child,
+.tbody tr:nth-child(2),
+.tbody tr:nth-child(3){
+  background: rgba(238, 70, 48, 0.849);
+  color:#fff;
+}
+
+.priorsymbol:before{
+   color:rgba(238, 70, 48, 0.849);
+  content:"\25C9";
+  padding: 10px;
+}
+
+.complete:before{
+  color:rgba(190, 188, 188, 0.849);
+ content:"\25C9";
+ padding: 10px;
+}
+
+
+.completetask tr:first-child,
+.completetask tr:nth-child(2),
+.completetask tr:nth-child(3){
+  background:rgba(190, 188, 188, 0.849);
+  color:#202020;
+}
